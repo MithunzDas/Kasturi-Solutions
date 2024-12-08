@@ -115,61 +115,22 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-7">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/app-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/product-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-5">
+          <div class="col-lg-6">
 
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Training Programs</h3>
               <ul>
-                <li>Individual Customer Training</li>
-                <li>Corporate Customer Training</li>
-                <li>External Certification Exam Preparation</li>
-                <li>Upskill Training</li>
-                <li>Academy Certificate Training</li>
-                <li> Internal Employee Training</li>
+                <div class="filter-buttons" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <button onclick="filterTraining('individual')" class="training-filter-btn active">Individual Training</button>
+                  <button onclick="filterTraining('corporate')" class="training-filter-btn">Corporate Training</button>
+                  <button onclick="filterTraining('certifications')" class="training-filter-btn">Certification Preparation</button>
+                  <button onclick="filterTraining('upskill')" class="training-filter-btn">Upskill Training</button>
+                  <button onclick="filterTraining('academy')" class="training-filter-btn">Academy Certification</button>
+                  <button onclick="filterTraining('internal')" class="training-filter-btn">Internal Training</button>
+                </div>
               </ul>
             </div>
+            
 
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="300">
               <h3>Ready to Secure Your Business?</h3>
@@ -216,6 +177,135 @@
             
             
           </div>
+
+          <!-- <div class="col-lg-4"> -->
+                  <!-- For image to attach code below -->
+            <!-- <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/books-1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div> -->
+
+            <div class="col-lg-6">
+              <!-- Content Section -->
+              <div id="training-content" class="training-content">
+                <!-- Default Content -->
+                <h3>Individual Training</h3>
+                <hr>
+                <ul class="training-list">
+                  <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Personalized Learning:</strong> Tailored training programs to meet your unique needs and goals.</li>
+                  <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Flexible Learning:</strong> Choose from in-person, online, or self-paced formats to suit your preferences.</li>
+                  <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Expert Guidance:</strong> Learn from industry experts who support you every step of the way.</li>
+                </ul>
+              </div>
+            
+              <script>
+                function filterTraining(type) {
+                  // Reset active class on all buttons
+                  const buttons = document.querySelectorAll('.training-filter-btn');
+                  buttons.forEach(btn => btn.classList.remove('active'));
+            
+                  // Set active class on the clicked button
+                  const activeButton = document.querySelector(`button[onclick="filterTraining('${type}')"]`);
+                  activeButton.classList.add('active');
+            
+                  // Update content based on the selected type
+                  const content = {
+                    individual: `
+                      <h3>Individual Training</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Personalized Learning:</strong> Tailored training programs to meet your unique needs and goals.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Flexible Learning:</strong> Choose from in-person, online, or self-paced formats to suit your preferences.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Expert Guidance:</strong> Learn from industry experts who support you every step of the way.</li>
+                      </ul>`,
+                    corporate: `
+                      <h3>Corporate Training</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Customized Training Solutions:</strong> Designed to meet your organization's specific needs.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Enhanced Employee Skills:</strong> Upskill your workforce and improve productivity.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Improved Organizational Performance:</strong> Align training with strategic objectives.</li>
+                      </ul>`,
+                    certifications: `
+                      <h3>Certification Preparation</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Comprehensive Exam Preparation:</strong> Materials and tests to ace certifications like PMP and CISSP.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Expert Guidance:</strong> Learn from trainers with deep domain knowledge.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Flexible Learning Options:</strong> Choose in-person, online, or self-paced formats.</li>
+                      </ul>`,
+                    upskill: `
+                      <h3>Upskill Training</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Stay Ahead of the Curve:</strong> Master new skills and technologies to advance your career.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Targeted Training:</strong> Focus on specific topics to enhance knowledge.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Practical Learning:</strong> Apply new skills directly to real-world scenarios.</li>
+                      </ul>`,
+                    academy: `
+                      <h3>Academy Certification</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Industry-Recognized Certifications:</strong> Boost your career with valuable credentials.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Comprehensive Curriculum:</strong> Covers essential topics for in-depth learning.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Hands-On Learning:</strong> Gain practical experience with real-world projects.</li>
+                      </ul>`,
+                    internal: `
+                      <h3>Internal Training</h3>
+                      <hr>
+                      <ul class="training-list">
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Skill Enhancement:</strong> Develop skills to improve employee performance.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Knowledge Sharing:</strong> Promote continuous learning within teams.</li>
+                        <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Increased Employee Engagement:</strong> Motivate employees with relevant programs.</li>
+                      </ul>`
+                  };
+                  document.getElementById('training-content').innerHTML = content[type] || '<p>No content available.</p>';
+                }
+            
+                // Load default content on page load
+                window.onload = function() {
+                  filterTraining('individual');
+                };
+              </script>
+            </div>
+            
+              
+            
 
         </div>
 

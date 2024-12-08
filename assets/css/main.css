@@ -1716,3 +1716,70 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Training Program filter style
+--------------------------------------------------------------*/
+.training-filter-btn {
+  color: #312f2f;
+  border: 2px solid #ffc451;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 8px 30px;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.training-filter-btn:hover {
+  background-color: #ffc451;
+  color: #312f2f;
+}
+
+.training-filter-btn.active {
+  background-color: #ffc451;
+  color: #312f2f;
+}
+
+/* ---------------------------------------------- */
+.training-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.training-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.training-content ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-20px);
+  animation: slideDown 0.5s forwards ease-in-out;
+}
+
+.training-content ul i {
+  color: #ffc451; /* Double tick color */
+  margin-right: 0.5rem;
+  line-height: 1.2;
+  font-size: 1.25rem;
+}
+/* --------------------------------------- */
+
+
+.tick-icon {
+  color: #ffc451;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
