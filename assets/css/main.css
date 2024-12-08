@@ -1743,43 +1743,86 @@ section,
   color: #312f2f;
 }
 
-/* ---------------------------------------------- */
+
+
+
+
+.training-content {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and slide effect for the container */
+}
+
 .training-content h3 {
   font-size: 1.75rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Add a color transition to the heading */
 }
 
 .training-content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .training-content ul li {
-  padding: 10px 0;
   display: flex;
-  align-items: center;
-  transform: translateY(-20px);
-  animation: slideDown 0.5s forwards ease-in-out;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px); /* Initially off-screen */
+  animation: fadeInSlideUp 0.6s ease forwards; /* Slide-up and fade-in animation */
 }
-
-.training-content ul i {
-  color: #ffc451; /* Double tick color */
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  font-size: 1.25rem;
-}
-/* --------------------------------------- */
-
 
 .tick-icon {
   color: #ffc451;
-  margin-right: 8px;
-  font-size: 18px;
+  font-size: 1.25rem;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Add hover effect for tick icon */
 }
 
-@keyframes slideDown {
-  to {
+.training-content ul li:hover .tick-icon {
+  transform: scale(1.2); /* Scale up tick icon slightly on hover */
+}
+
+.training-content ul li strong {
+  font-size: 1.2rem;
+  color: #312f2f;
+  transition: color 0.3s ease; /* Add a subtle color transition for the text */
+}
+
+.training-content ul li:hover strong {
+  color: #ffc451; /* Change text color on hover for better interactivity */
+}
+
+.training-content ul li .description {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 1.6rem;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.3s; /* Delay the fade-in for the description */
+}
+
+/* Keyframe animations for smooth appearance */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* End in place */
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
