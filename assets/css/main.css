@@ -1752,22 +1752,25 @@ section,
 }
 
 .training-content h3 {
-  font-size: 1.75rem;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb,var(--default-color),transparent 85%);
   transition: color 0.3s ease; /* Add a color transition to the heading */
 }
 
 .training-content ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  font-size: 15px;
+  /* margin: 0; */
 }
 
 .training-content ul li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   opacity: 0;
   transform: translateY(20px); /* Initially off-screen */
   animation: fadeInSlideUp 0.6s ease forwards; /* Slide-up and fade-in animation */
@@ -1775,7 +1778,7 @@ section,
 
 .tick-icon {
   color: #ffc451;
-  font-size: 1.25rem;
+  font-size: 18px;
   margin-right: 10px;
   flex-shrink: 0;
   transition: transform 0.3s ease; /* Add hover effect for tick icon */
@@ -1786,7 +1789,7 @@ section,
 }
 
 .training-content ul li strong {
-  font-size: 1.2rem;
+  font-size: 18px;
   color: #312f2f;
   transition: color 0.3s ease; /* Add a subtle color transition for the text */
 }
@@ -1796,9 +1799,9 @@ section,
 }
 
 .training-content ul li .description {
-  font-size: 1rem;
+  font-size: 18px;
   color: #666;
-  margin-left: 1.6rem;
+  margin-left: 10px;
   line-height: 1.5;
   opacity: 0;
   animation: fadeIn 0.6s ease forwards 0.3s; /* Delay the fade-in for the description */
