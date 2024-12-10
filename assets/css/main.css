@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ffc451; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #25A012; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.905);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffc451; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #25A012; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffc451; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #25A012; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1724,7 +1724,7 @@ section,
 --------------------------------------------------------------*/
 .training-filter-btn {
   color: #312f2f;
-  border: 2px solid #ffc451;
+  border: 2px solid #25A012;
   border-radius: 4px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -1736,12 +1736,12 @@ section,
 }
 
 .training-filter-btn:hover {
-  background-color: #ffc451;
+  background-color: #25A012;
   color: #312f2f;
 }
 
 .training-filter-btn.active {
-  background-color: #ffc451;
+  background-color: #25A012;
   color: #312f2f;
 }
 
@@ -1779,7 +1779,7 @@ section,
 }
 
 .tick-icon {
-  color: #ffc451;
+  color: #25A012;
   font-size: 18px;
   margin-right: 10px;
   flex-shrink: 0;
@@ -1797,7 +1797,7 @@ section,
 }
 
 .training-content ul li:hover strong {
-  color: #ffc451; /* Change text color on hover for better interactivity */
+  color: #25A012; /* Change text color on hover for better interactivity */
 }
 
 .training-content ul li .description {
@@ -1836,7 +1836,7 @@ section,
 /* Filter Button Styles */
 .development-filter-btn {
   color: #312f2f;
-  border: 2px solid #ffc451;
+  border: 2px solid #25A012;
   border-radius: 4px;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -1848,12 +1848,12 @@ section,
 }
 
 .development-filter-btn:hover {
-  background-color: #ffc451;
+  background-color: #25A012;
   color: #312f2f;
 }
 
 .development-filter-btn.active {
-  background-color: #ffc451;
+  background-color: #25A012;
   color: #312f2f;
 }
 
@@ -1887,7 +1887,7 @@ section,
 }
 
 .tick-icon {
-  color: #ffc451;
+  color: #25A012;
   font-size: 18px;
   margin-right: 10px;
   flex-shrink: 0;
@@ -1905,7 +1905,7 @@ section,
 }
 
 .development-content ul li:hover strong {
-  color: #ffc451; /* Change text color on hover for better interactivity */
+  color: #25A012; /* Change text color on hover for better interactivity */
 }
 
 .development-content ul li .description {
