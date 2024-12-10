@@ -1828,4 +1828,110 @@ section,
   }
 }
 
+/*--------------------------------------------------------------
+# Managed Software Development Program filter style
+--------------------------------------------------------------*/
+/* Filter Button Styles */
+.development-filter-btn {
+  color: #312f2f;
+  border: 2px solid #ffc451;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 8px 30px;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+.development-filter-btn:hover {
+  background-color: #ffc451;
+  color: #312f2f;
+}
+
+.development-filter-btn.active {
+  background-color: #ffc451;
+  color: #312f2f;
+}
+
+/* Content Section Styles */
+.development-content {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and slide effect */
+}
+
+.development-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  transition: color 0.3s ease; /* Add a color transition to the heading */
+}
+
+.development-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.development-content ul li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px); /* Initially off-screen */
+  animation: fadeInSlideUp 0.6s ease forwards; /* Slide-up and fade-in animation */
+}
+
+.tick-icon {
+  color: #ffc451;
+  font-size: 18px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* Add hover effect for tick icon */
+}
+
+.development-content ul li:hover .tick-icon {
+  transform: scale(1.2); /* Scale up tick icon slightly on hover */
+}
+
+.development-content ul li strong {
+  font-size: 18px;
+  color: #312f2f;
+  transition: color 0.3s ease; /* Add a subtle color transition for the text */
+}
+
+.development-content ul li:hover strong {
+  color: #ffc451; /* Change text color on hover for better interactivity */
+}
+
+.development-content ul li .description {
+  font-size: 18px;
+  color: #666;
+  margin-left: 10px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.3s; /* Delay the fade-in for the description */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in place */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
