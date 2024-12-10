@@ -8,7 +8,7 @@
 
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
+
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -158,20 +158,22 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 48px;
   margin-right: 8px;
 }
 
 .header .logo h1 {
   font-size: 32px;
   margin: 0;
+  line-height: 1;
   font-weight: 700;
   color: var(--heading-color);
 }
 
 .header .logo span {
   color: var(--accent-color);
-  font-size: 32px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .header .btn-getstarted,
