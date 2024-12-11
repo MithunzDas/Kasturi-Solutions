@@ -224,149 +224,121 @@
               </div>
               <div class="swiper-pagination"></div>
             </div> --> 
+
             <div class="col-lg-6">
-              <section id="portfolio-details" class="portfolio-details section"> 
+              <section id="portfolio-details" class="portfolio-details section">
                 <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-                  <h3>Managed Software Development</h3>
-                  <ul>
-                    <div class="filter-buttons" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                      <button onclick="filterDevelopment('new-applications')" class="development-filter-btn active">New Applications</button>
-                      <button onclick="filterDevelopment('enhancements')" class="development-filter-btn">Enhancements</button>
-                      <button onclick="filterDevelopment('support-maintenance')" class="development-filter-btn">Support & Maintenance</button>
-                    </div>
-                  </ul>
+                  <h3 style="text-align: center;">Managed Software Development</h3>
+                  <div class="filter-buttons" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+                    <button onclick="filterDevelopment('new-applications')" class="development-filter-btn active">New Applications</button>
+                    <button onclick="filterDevelopment('enhancements')" class="development-filter-btn">Enhancements</button>
+                    <button onclick="filterDevelopment('support-maintenance')" class="development-filter-btn">Support & Maintenance</button>
+                  </div>
                 </div>
             
                 <!-- Content Section -->
-                <section id="portfolio-details" class="portfolio-details section"> 
-                  <div id="development-content" class="development-content">
+                <section id="portfolio-details" class="portfolio-details section">
+                  <div id="development-content" class="development-content" style="text-align: justify;">
                     <!-- Default Content -->
                     <h3>Outsourced Software Development of New Applications</h3>
                     <hr>
-                    <ul class="development-list">
-                      <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Tailored Solutions:</strong> We develop custom software applications aligned with your specific business needs.</li>
-                      <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Agile Development:</strong> Our agile methodologies ensure rapid development and flexibility.</li>
-                      <li><span class="tick-icon">&#10003;&#10003;</span> <strong>Cutting-Edge Technologies:</strong> We leverage the latest technologies to deliver innovative solutions.</li>
-                    </ul>
+                    <table style="width: 100%; border-spacing: 0 10px;">
+                      <tr>
+                        <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                        <td><strong>Tailored Solutions:</strong> We develop custom software applications aligned with your specific business needs.</td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                        <td><strong>Agile Development:</strong> Our agile methodologies ensure rapid development and flexibility.</td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                        <td><strong>Cutting-Edge Technologies:</strong> We leverage the latest technologies to deliver innovative solutions.</td>
+                      </tr>
+                    </table>
                   </div>
             
                   <script>
                     // Function to update the active class and load content dynamically
                     function filterDevelopment(type) {
-                      // Select all buttons with the 'development-filter-btn' class
                       const buttons = document.querySelectorAll('.development-filter-btn');
-            
-                      // Remove the 'active' class from all buttons
                       buttons.forEach(btn => btn.classList.remove('active'));
-            
-                      // Add the 'active' class to the clicked button
                       const activeButton = document.querySelector(`button[onclick="filterDevelopment('${type}')"]`);
                       if (activeButton) {
                         activeButton.classList.add('active');
                       }
             
-                      // Define the content for each development type
                       const content = {
                         'new-applications': `
                           <h3>Outsourced Software Development of New Applications</h3>
-                          <ul>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Tailored Solutions</strong>
-                              <div class="description">
-                                We develop custom software applications aligned with your specific business needs.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Agile Development</strong>
-                              <div class="description">
-                                Our agile methodologies ensure rapid development and flexibility.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Cutting-Edge Technologies</strong>
-                              <div class="description">
-                                We leverage the latest technologies to deliver innovative solutions.
-                              </div>
-                            </li>
-                          </ul>`,
+                          <hr>
+                          <table style="width: 100%; border-spacing: 0 10px;">
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Tailored Solutions:</strong> We develop custom software applications aligned with your specific business needs.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Agile Development:</strong> Our agile methodologies ensure rapid development and flexibility.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Cutting-Edge Technologies:</strong> We leverage the latest technologies to deliver innovative solutions.</td>
+                            </tr>
+                          </table>`,
                         'enhancements': `
                           <h3>Outsourced Software Enhancement and Upgrade of Existing Applications</h3>
-                          <ul>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Legacy Modernization</strong>
-                              <div class="description">
-                                We revitalize outdated systems to improve performance and security.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Feature Enhancement</strong>
-                              <div class="description">
-                                We add new features and functionalities to meet evolving business requirements.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Performance Optimization</strong>
-                              <div class="description">
-                                We optimize your applications for speed and efficiency.
-                              </div>
-                            </li>
-                          </ul>`,
+                          <hr>
+                          <table style="width: 100%; border-spacing: 0 10px;">
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Legacy Modernization:</strong> We revitalize outdated systems to improve performance and security.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Feature Enhancement:</strong> We add new features and functionalities to meet evolving business requirements.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Performance Optimization:</strong> We optimize your applications for speed and efficiency.</td>
+                            </tr>
+                          </table>`,
                         'support-maintenance': `
                           <h3>Outsourced Support and Maintenance of Applications</h3>
-                          <ul>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>24/7 Support</strong>
-                              <div class="description">
-                                Our dedicated support team provides round-the-clock assistance.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Proactive Monitoring</strong>
-                              <div class="description">
-                                We monitor your applications to prevent issues before they occur.
-                              </div>
-                            </li>
-                            <li>
-                              <span class="tick-icon">&#10003;&#10003;</span>
-                              <strong>Rapid Response</strong>
-                              <div class="description">
-                                We quickly address and resolve any problems that may arise.
-                              </div>
-                            </li>
-                          </ul>`
+                          <hr>
+                          <table style="width: 100%; border-spacing: 0 10px;">
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>24/7 Support:</strong> Our dedicated support team provides round-the-clock assistance.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Proactive Monitoring:</strong> We monitor your applications to prevent issues before they occur.</td>
+                            </tr>
+                            <tr>
+                              <td style="vertical-align: top; width: 5%;"><span class="tick-icon">&#10003;&#10003;</span></td>
+                              <td><strong>Rapid Response:</strong> We quickly address and resolve any problems that may arise.</td>
+                            </tr>
+                          </table>`
                       };
             
-                      // Select the development content container
                       const developmentContent = document.getElementById('development-content');
-            
-                      // Fade out content
                       developmentContent.style.opacity = 0;
             
-                      // Delay content update to match fade-out duration
                       setTimeout(() => {
                         developmentContent.innerHTML = content[type] || '<p>No content available.</p>';
-                        developmentContent.style.opacity = 1; // Fade in new content
-                      }, 300); // 300ms matches the CSS transition duration
+                        developmentContent.style.opacity = 1;
+                      }, 300);
                     }
             
-                    // Load default content on page load
                     window.onload = function() {
-                      filterDevelopment('new-applications'); // Default category
+                      filterDevelopment('new-applications');
                     };
                   </script>
                 </section>
               </section>
             </div>
             
-
 
         </div>
 
